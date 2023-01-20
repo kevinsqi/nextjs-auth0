@@ -269,6 +269,7 @@ export default function handleLoginFactory(
     res?: NextApiResponse,
     options?: LoginOptions
   ): any => {
+    console.log('DEBUG OPTIONS', options);
     if (reqOrOptions instanceof IncomingMessage && res) {
       return login(reqOrOptions, res, options);
     }
